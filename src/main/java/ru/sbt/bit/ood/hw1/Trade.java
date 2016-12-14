@@ -8,10 +8,18 @@ public class Trade {
     private final double price;
     private final double quantity;
 
+    public Trade(){
+        tradeId=null;
+        instrument=null;
+        price=0;
+        quantity=0;
+    }
+
     public Trade(Map<String, String> tradeFieldValues) {
         tradeId = tradeFieldValues.get("tradeId");
         instrument = tradeFieldValues.get("instrument");
         price = Double.parseDouble(tradeFieldValues.get("price"));
         quantity = Double.parseDouble(tradeFieldValues.get("quantity"));
     }
+
 }

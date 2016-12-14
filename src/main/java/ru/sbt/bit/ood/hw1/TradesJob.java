@@ -21,6 +21,7 @@ public class TradesJob {
         String filename = tradeDownloader.downloadTrades();
         Iterable trades = tradeParser.parse(filename);
         updateTrades(trades);
+        System.out.println("All perform successfully");
     }
 
     private void updateTrades(Iterable trades) {
